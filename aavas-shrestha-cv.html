@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aavas Shrestha</title>
+</head>
+
+<body>
+  <header>
+    <h1> <a href="https://www.linkedin.com/in/aavas-shrestha-369352198/" target="_blank"> Aavas Shrestha</a></h1>
+    <br>
+    <img src="me.jpg" alt="my head-shot" width="170">
+    <p>Aspiring Software Developer</p>
+    <hr>
+  </header>
+  <main>
+    <section> <!--About me section-->
+      <h2>About Me</h2>
+      <p>
+        I am 29 and I am from <strong><a href="https://www.cia.gov/the-world-factbook/countries/nepal/"
+            target="_blank">Nepal</a></strong>. I immigrated to the US in the year 2020.
+        I completed my Bachelor's in Business Management from India. I am
+        working as a store supervisor and a part-time cashier in a small
+        family-owned business.
+      </p>
+    </section>
+    <!-- My skills section -->
+    <section>
+      <h2>Skills</h2> <!-- Add more skills as you learn in the future-->
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+      </ul>
+    </section>
+    <!-- Tools I know section  -->
+    <section>
+      <h2>Tools</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tool name</th>
+            <th>Description</th>
+            <th>Proficiency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Visual Studio Code</td>
+            <td>A free source-code editor made by Microsoft for Windows, Linux, and macOS</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>Slack</td>
+            <td>Collaboration hub for work, with channels, messaging, and file sharing.</td>
+            <td>Expert</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- Langyuage I know -->
+    <section>
+      <h2>Language Proficiency</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Speaking </th>
+            <th>Writing </th>
+            <th>Reading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English</td>
+            <td>Intermediate</td>
+            <td>Intermediate</td>
+            <td>Expert</td>
+          </tr>
+          <tr>
+            <td>Nepali</td>
+            <td>Expert</td>
+            <td>Expert</td>
+            <td>Expert</td>
+          </tr>
+          <tr>
+            <td>Hindi</td>
+            <td>Expert</td>
+            <td>Intermediate</td>
+            <td>Intermediate</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- My journey section -->
+    <section>
+      <h2>My journey into programming.</h2>
+      <p>
+        I was introduced to programming by my cousin back in 2020 when I first came to the United State. He is a
+        back-end developer and specializes in Node.js. He guided me to a path of being a web developer. So I started by
+        learning basic HTML, CSS and Javascript on my spare time sometime around June 2020. I love how challenging it
+        got at times, expecially when I reached Javascript but it encouraged me to learn more and to get better at it. I
+        am currently enrolled in Springboard Software Engineering Bootcamp.
+      </p>
+    </section>
+  </main>
+  <aside> <!--Contact information-->
+    <h2>Contact information</h2>
+    <p>Email: 19aavas94@gmail.com, phone: +16463386141</p>
+    <p>My Socials:</p>
+    <ul>
+      <li><a href="#" target="blank">LinkedIn</a></li>
+      <li><a href="#" target="blank">Facebook</a></li>
+      <li><a href="#" target="blank">Instagram</a></li>
+    </ul>
+  </aside>
+  <section>
+    <h2>Contact Me</h2>
+    <form action="#">
+      <label for="name">Name:</label>
+      <!--Added the for attribute with value "name to bind it to the accociated input element"-->
+      <input type="text" id="name" placeholder="Your full name" minlength="2" required>
+      <!--added a min lenth of two character. Also added "required attribute so that the field is not left blank."-->
+      <br>
+      <!-- Input field for email -->
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="xyz@example.com" required>
+      <br>
+      <!-- input field for Organization -->
+      <label for="organization">Organization:</label>
+      <input type="text" id="organization" placeholder="Your company name" required>
+      <br>
+      <!-- input field for company role -->
+      <label for="role">Your company role:</label>
+      <input type="text" id="role" placeholder="Your role">
+      <br>
+      <!-- input field for reason to contact -->
+      <label for="contact">Reason to contact?</label>
+      <select id="contact">
+        <option value="offer">Job Offer.</option>
+        <option value="collab">Collaboration.</option>
+        <option value="hi">Just saying Hi.</option>
+        <option value="help">Need help.</option>
+      </select>
+      <br>
+      <!-- input field for coding time preference -->
+      <fieldset>
+        <legend>When do you prefer to code?</legend>
+        <input type="checkbox" id="morning" name="morning" value="morning">
+        <label for="morning">Morning</label>
+        <br>
+        <input type="checkbox" id="afternoon" name="afternoon" value="afternoon">
+        <label for="afternoon">Afternoon</label>
+        <br>
+        <input type="checkbox" id="night" name="night" value="night">
+        <label for="night">Night</label>
+        <br>
+        <input type="checkbox" id="nightowl" name="nightowl" value="nightowl">
+        <label for="nightowl">2am (NightOwl)</label>
+      </fieldset>
+      <br>
+      <button>Clear</button>
+      <button type="submit">Submit</button>
+      <br>
+    </form>
+  </section>
+  <footer>
+    <em>Copyright © 2023 Aavas Shrestha</em>
+  </footer>
+</body>
+
+</html>
