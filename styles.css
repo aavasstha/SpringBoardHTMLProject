@@ -1,0 +1,65 @@
+body {
+    color: rgb(233, 202, 3);
+    /* added gradient background  */
+    background: linear-gradient(297deg, rgba(37, 155, 213, 1) 11%, rgba(117, 109, 221, 1) 52%, rgba(151, 27, 247, 1) 85%, rgba(162, 0, 255, 1) 100%);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 19px;
+}
+
+h1 {
+    /* moving the h1 to center of the page */
+    text-align: center;
+    /* increased font size for heading */
+    font-size: 3rem;
+    /* imported font from google font */
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    /* added shadow */
+    text-shadow: rgb(191, 191, 191) 8px 8px 9px;
+}
+
+
+
+h2 {
+    background-color: rgb(247, 171, 171);
+    /* fallback  background color */
+    background-color: rgba(247, 171, 171, 0.171);
+    text-decoration: underline rgb(255, 174, 0);
+}
+
+/*applying same styles for two elemens*/
+section,
+aside {
+    background: rgb(0, 0, 0);
+    /* fallback color */
+    background: rgba(0, 0, 0, 0.236);
+}
+
+a {
+    text-decoration: none;
+    /* removed the default styles associated with link*/
+    color: inherit;
+    /* inheriting text color from parent*/
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+li {
+    list-style-type: square;
+    color: rgb(255, 255, 255);
+}
+
+table {
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+
+form {
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    font-size: 10px;
+}
