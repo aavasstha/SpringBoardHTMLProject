@@ -29,6 +29,11 @@ h1 {
     /* added shadow */
     text-shadow: rgb(191, 191, 191) 8px 8px 9px;
 }
+header p {
+    font-size: 1.6em;
+    color: orangered;
+    text-decoration: underline;
+}
 
 /* styling profile image */
 #profile-image {
@@ -52,7 +57,7 @@ h2 {
 /*applying same styles for two elemens*/
 section,
 aside {
-    /* added margins */
+    /* added margins to top and bottom*/
     margin: 2rem;
     /* added padding */
     padding: 0.5em;
@@ -61,7 +66,7 @@ aside {
     /* fallback color */
     background: rgba(0, 0, 0, 0.236);
     /* added border to set them apart */
-    border: 6px solid rgba(255, 0, 0, 0.564);
+    border: 6px solid rgba(255, 48, 48, 0.638);
 }
 
 /* stylding the anchot tag */
@@ -89,6 +94,10 @@ table {
     padding: 2em;
     color: rgb(255, 255, 255);
     text-align: start;
+}
+/* added text color to table heads */
+th{
+    color: rgba(68, 255, 0, 0.803);
 }
 
 /* styling the form */
