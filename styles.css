@@ -28,7 +28,11 @@ h1 {
     text-transform: uppercase;
     /* added shadow */
     text-shadow: rgb(191, 191, 191) 8px 8px 9px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
+
 header p {
     font-size: 1.6em;
     color: orangered;
@@ -39,6 +43,7 @@ header p {
 #profile-image {
     /* resized the image */
     height: 300px;
+    width: 300px;
     /* made the image raounder */
     border-radius: 50%;
     /* added border to the image */
@@ -69,6 +74,13 @@ aside {
     border: 6px solid rgba(255, 48, 48, 0.638);
 }
 
+/* styling the contact information */
+.contact-info p:nth-child(2) {
+    position: absolute;
+    right: 120px;
+    top: 390px;
+}
+
 /* stylding the anchot tag */
 a {
     text-decoration: none;
@@ -91,13 +103,21 @@ li {
 
 /* styling the table  */
 table {
+    width: 100%;
     padding: 2em;
     color: rgb(255, 255, 255);
     text-align: start;
 }
+
 /* added text color to table heads */
-th{
+th {
+    text-align: center;
     color: rgba(68, 255, 0, 0.803);
+}
+
+/* styling the table data */
+td {
+    text-align: center;
 }
 
 /* styling the form */
@@ -105,7 +125,11 @@ form {
     padding: 0.5em;
     margin: 1.5em;
     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 /* styling fieldset */
 fieldset {
@@ -117,6 +141,11 @@ fieldset {
 input {
     /* added margin to separate */
     margin: 0.5em;
+}
+
+textarea {
+    background-color: rgba(79, 21, 117, 0.67);
+    color: whitesmoke;
 }
 
 /* styling button */
