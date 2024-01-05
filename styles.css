@@ -170,7 +170,9 @@ footer {
 
 
 /* for mobile viewing */
-@media(max-width: 480px) {
+/* Source: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
+
+@media(min-width:320px), (min-width: 420px) {
 
     /* removed padding to remove extra space */
     body {
@@ -186,6 +188,7 @@ footer {
 
     /* change font size of header */
     h1 {
+        width: auto;
         font-size: 1.8em;
         margin-top: 0px;
     }
@@ -260,5 +263,160 @@ footer {
     button:hover {
         font-size: 20px;
     }
+}
 
+/* for tablet and larger screen viewing */
+/* Source: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
+@media (min-width: 600px) {
+
+    /* removed padding to remove extra space */
+    body {
+        padding: 0;
+    }
+
+    /* removed margin to fit content to screen */
+    section,
+    aside {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* change font size of header */
+    h1 {
+        width: auto;
+        font-size: 2em;
+        margin-top: 0px;
+    }
+
+    /* aligned header text to center  */
+    h2 {
+        text-align: left;
+    }
+
+    /* aligned and resized the paragraph */
+    header p {
+        font-size: 1em;
+        text-align: left;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+
+    /* rexized and re-positioned profile picture to center */
+    #profile-image {
+        width: 200px;
+        height: 200px;
+        border: 5px rgba(24, 20, 1, 0.476) solid;
+        position: relative;
+        top: 20px;
+        left: 15px;
+    }
+
+    .contact-info p:nth-child(2) {
+
+        position: absolute;
+        left: 30px;
+        top: 290px;
+
+    }
+
+    /* stylding the anchot tag */
+    a {
+        text-decoration: none;
+        /* removed the default styles associated with link*/
+        color: inherit;
+        /* inheriting text color from parent*/
+    }
+
+    /* styling paragraphs */
+    p {
+        color: rgb(255, 255, 255);
+    }
+
+    /* styling individual list items */
+    li {
+        /* added a different list style */
+        list-style-type: square;
+        color: rgb(255, 255, 255);
+    }
+
+    /* styling the table  */
+    table {
+        width: 100%;
+        /* padding: 2em; */
+        color: rgb(255, 255, 255);
+        /* text-align: start; */
+    }
+
+    /* added text color to table heads */
+    th {
+        text-align: center;
+        color: rgba(68, 255, 0, 0.803);
+    }
+
+    /* styling the table data */
+    td {
+        text-align: center;
+    }
+
+    /* styling the form */
+    form {
+        border: 1px solid white;
+        padding: 0.5em;
+        margin: 1.5em;
+        color: rgb(255, 255, 255);
+    }
+
+    /* styling fieldset */
+    fieldset {
+        margin: 1em;
+        padding: 1em;
+    }
+
+    /* styling individual inout */
+    input {
+        /* added margin to separate */
+        margin: 0.5em;
+    }
+
+    /* selection all inout inside fieldset */
+    #email,
+    #name,
+    #organization,
+    #role {
+        height: 40px;
+        width: 100%;
+        background-color: rgba(79, 21, 117, 0.500);
+        color: antiquewhite;
+    }
+
+    form label {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        background-color: rgba(79, 21, 117, 0.5);
+        color: whitesmoke;
+    }
+
+    /* styling button */
+    button {
+        background-color: rgba(115, 9, 147, 0.73);
+        color: antiquewhite;
+    }
+
+    /* styling on button hover */
+    button:hover {
+        /* increse size when hovering */
+        font-size: 1rem;
+        /* change color when hovering */
+        background-color: rgba(195, 89, 195, 0.688);
+    }
+
+    /* styling the footer */
+    footer {
+        /* decreased font size  */
+        font-size: 10px;
+    }
 }
