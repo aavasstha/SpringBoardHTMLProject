@@ -42,8 +42,8 @@ header p {
 /* styling profile image */
 #profile-image {
     /* resized the image */
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     /* made the image raounder */
     border-radius: 50%;
     /* added border to the image */
@@ -77,8 +77,8 @@ aside {
 /* styling the contact information */
 .contact-info p:nth-child(2) {
     position: absolute;
-    right: 120px;
-    top: 390px;
+    right: 30px;
+    top: 290px;
 }
 
 /* stylding the anchot tag */
@@ -166,4 +166,99 @@ button:hover {
 footer {
     /* decreased font size  */
     font-size: 10px;
+}
+
+
+/* for mobile viewing */
+@media(max-width: 480px) {
+
+    /* removed padding to remove extra space */
+    body {
+        padding: 0;
+    }
+
+    /* removed margin to fit content to screen */
+    section,
+    aside {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* change font size of header */
+    h1 {
+        font-size: 1.8em;
+        margin-top: 0px;
+    }
+
+    /* aligned header text to center  */
+    h2 {
+        text-align: center;
+    }
+
+    /* aligned and resized the paragraph */
+    header p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    /* rexized and re-positioned profile picture to center */
+    #profile-image {
+        width: 100px;
+        height: 100px;
+        border: 5px rgba(24, 20, 1, 0.476) solid;
+        position: relative;
+        top: 20px;
+        left: 150px;
+    }
+
+    .contact-info p:nth-child(2) {
+        font-size: 12px;
+        top: 200px;
+        left: 100px
+    }
+
+    /* sourse to make table more mobile friendly: https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width */
+    table {
+        padding: 0;
+        table-layout: fixed;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* added border to tables */
+    th,
+    td {
+        border: 1px solid black;
+        margin: 0;
+    }
+
+    /* resized input boxes */
+    #email,
+    #name,
+    #organization,
+    #role {
+        height: 40px;
+        width: 120%;
+        background-color: rgba(255, 255, 255, 0.773);
+    }
+
+    fieldset {
+        font-size: 20px;
+        border: 1px solid red;
+        width: 100%;
+    }
+
+    button {
+        height: 40px;
+        width: 100px;
+        margin: 5px;
+        transition: 0.3s ease-out;
+    }
+
+    /* source used to make transition effect on the button: https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+    button:hover {
+        font-size: 20px;
+    }
+
 }
