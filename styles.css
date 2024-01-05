@@ -91,7 +91,7 @@ a {
 
 /* styling paragraphs */
 p {
-    color: rgb(255, 255, 255);
+    color: whitesmoke;
 }
 
 /* styling individual list items */
@@ -105,7 +105,7 @@ li {
 table {
     width: 100%;
     padding: 2em;
-    color: rgb(255, 255, 255);
+    color: whitesmoke;
     text-align: start;
 }
 
@@ -124,7 +124,7 @@ td {
 form {
     padding: 0.5em;
     margin: 1.5em;
-    color: rgb(255, 255, 255);
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,6 +133,7 @@ form {
 
 /* styling fieldset */
 fieldset {
+    text-align: start;
     margin: 1em;
     padding: 1em;
 }
@@ -143,6 +144,13 @@ input {
     margin: 0.5em;
 }
 
+select {
+    width: 100%;
+    color: whitesmoke;
+    background-color: rgba(86, 47, 112, 0.67);
+}
+
+
 textarea {
     background-color: rgba(79, 21, 117, 0.67);
     color: whitesmoke;
@@ -151,7 +159,7 @@ textarea {
 /* styling button */
 button {
     background-color: rgba(115, 9, 147, 0.73);
-    color: antiquewhite;
+    color: whitesmoke;
 }
 
 /* styling on button hover */
@@ -364,7 +372,7 @@ footer {
         border: 1px solid white;
         padding: 0.5em;
         margin: 1.5em;
-        color: rgb(255, 255, 255);
+        color: whitesmoke;
     }
 
     /* styling fieldset */
@@ -387,7 +395,7 @@ footer {
         height: 40px;
         width: 100%;
         background-color: rgba(79, 21, 117, 0.500);
-        color: antiquewhite;
+        color: whitesmoke;
     }
 
     form label {
