@@ -506,7 +506,7 @@ footer {
 
     button {
         height: 40px;
-        width: 100%;
+        width: 50%;
         margin: 5px;
         transition: 0.3s ease-out;
     }
