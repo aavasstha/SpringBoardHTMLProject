@@ -17,7 +17,6 @@ body {
     font-size: 19px;
 }
 
-
 h1 {
     /* moving the h1 to center of the page */
     text-align: center;
@@ -37,6 +36,11 @@ header p {
     font-size: 1.6em;
     color: orangered;
     text-decoration: underline;
+}
+
+.header-contact {
+    color: whitesmoke;
+    font-size: 1em;
 }
 
 /* styling profile image */
@@ -74,12 +78,6 @@ aside {
     border: 6px solid rgba(255, 48, 48, 0.638);
 }
 
-/* styling the contact information */
-.contact-info p:nth-child(2) {
-    position: absolute;
-    right: 30px;
-    top: 290px;
-}
 
 /* stylding the anchot tag */
 a {
@@ -98,15 +96,22 @@ p {
 li {
     /* added a different list style */
     list-style-type: square;
-    color: rgb(255, 255, 255);
+    color: whitesmoke
 }
 
 /* styling the table  */
 table {
-    width: 100%;
-    padding: 2em;
-    color: whitesmoke;
-    text-align: start;
+    padding: 0;
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
+}
+
+/* added border to tables */
+th,
+td {
+    border: 1px solid black;
+    margin: 0;
 }
 
 /* added text color to table heads */
@@ -120,6 +125,17 @@ td {
     text-align: center;
 }
 
+/* styling listitems */
+ul li{
+    transition: ease 0.1s;
+}
+
+li:hover{
+    font-size: 20px;
+    color: rgba(219, 100, 255, 0.841);
+
+}
+
 /* styling the form */
 form {
     padding: 0.5em;
@@ -130,6 +146,9 @@ form {
     align-items: center;
 }
 
+form label {
+    width: 100%;
+}
 
 /* styling fieldset */
 fieldset {
@@ -146,10 +165,32 @@ input {
 
 select {
     width: 100%;
+    height: 40px;
     color: whitesmoke;
     background-color: rgba(86, 47, 112, 0.67);
 }
 
+textarea {
+    width: 70%;
+}
+
+/* resized input boxes */
+#email,
+#name,
+#organization,
+#role {
+    height: 40px;
+    width: 100%;
+    background-color: rgba(79, 21, 117, 0.500);
+    color: whitesmoke;
+}
+
+/* styling fieldset */
+fieldset {
+    font-size: 20px;
+    border: 1px solid red;
+    width: 100%;
+}
 
 textarea {
     background-color: rgba(79, 21, 117, 0.67);
@@ -160,6 +201,11 @@ textarea {
 button {
     background-color: rgba(115, 9, 147, 0.73);
     color: whitesmoke;
+    transition: 0.3s ease-out;
+    width: 150px;
+    height: 40px;
+    margin: 10px 0 20px 0;
+
 }
 
 /* styling on button hover */
@@ -176,15 +222,10 @@ footer {
     font-size: 10px;
 }
 
-
-/* for mobile viewing */
-/* Source: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
-
-@media(min-width:320px), (min-width: 420px) {
-
-    /* removed padding to remove extra space */
+/* Responsiveness for medium phones */
+@media (max-width: 480px) {
     body {
-        padding: 0;
+        padding: 5px;
     }
 
     /* removed margin to fit content to screen */
@@ -197,7 +238,7 @@ footer {
     /* change font size of header */
     h1 {
         width: auto;
-        font-size: 1.8em;
+        font-size: 1.6em;
         margin-top: 0px;
     }
 
@@ -211,22 +252,23 @@ footer {
         font-size: 1em;
         text-align: center;
         margin-bottom: 70px;
+        margin-bottom: 10px;
+    }
+
+    /* selecting contact detail in header using class */
+    .header-contact {
+        color: whitesmoke;
+        font-size: 0.7em;
     }
 
     /* rexized and re-positioned profile picture to center */
     #profile-image {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border: 5px rgba(24, 20, 1, 0.476) solid;
         position: relative;
         top: 20px;
-        left: 150px;
-    }
-
-    .contact-info p:nth-child(2) {
-        font-size: 12px;
-        top: 200px;
-        left: 100px
+        left: 110px;
     }
 
     /* sourse to make table more mobile friendly: https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width */
@@ -251,9 +293,10 @@ footer {
     #role {
         height: 40px;
         width: 120%;
-        background-color: rgba(255, 255, 255, 0.773);
+        background-color: rgba(79, 21, 117, 0.500);
     }
 
+    /* styling fieldset */
     fieldset {
         font-size: 20px;
         border: 1px solid red;
@@ -262,7 +305,7 @@ footer {
 
     button {
         height: 40px;
-        width: 100px;
+        width: 100%;
         margin: 5px;
         transition: 0.3s ease-out;
     }
@@ -273,158 +316,297 @@ footer {
     }
 }
 
-/* for tablet and larger screen viewing */
-/* Source: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
-@media (min-width: 600px) {
-
-    /* removed padding to remove extra space */
+/* Responsiveness for small phones */
+@media (max-width: 360px) {
     body {
-        padding: 0;
+        padding: 5px;
     }
 
     /* removed margin to fit content to screen */
     section,
     aside {
-
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* change font size of header */
     h1 {
         width: auto;
-        font-size: 4em;
         margin-top: 0px;
+        font-size: 1.3em;
     }
 
     /* aligned header text to center  */
     h2 {
-        text-align: left;
+        text-align: center;
+    }
+
+    a {
+        font-size: 0.8em;
     }
 
     /* aligned and resized the paragraph */
     header p {
-        font-size: 2em;
-        text-align: left;
-        margin-left: 10px;
-        margin-bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 70px;
+        margin-bottom: 10px;
+    }
+
+    section p {
+        font-size: 0.8em;
+    }
+
+    /* selecting contact detail in header using class */
+    .header-contact {
+        color: whitesmoke;
+        font-size: 0.7em;
     }
 
     /* rexized and re-positioned profile picture to center */
     #profile-image {
-        width: 300px;
-        height: 300px;
+        width: 150px;
+        height: 150px;
         border: 5px rgba(24, 20, 1, 0.476) solid;
         position: relative;
-        top: 20px;
-        left: 15px;
+        top: 10px;
+        left: 60px;
     }
 
-    .contact-info p:nth-child(2) {
-        font-size: 1em;
-        position: absolute;
-        left: 30px;
-        top: 430px;
-
-    }
-
-    /* stylding the anchot tag */
-    a {
-        text-decoration: none;
-        /* removed the default styles associated with link*/
-        color: inherit;
-        /* inheriting text color from parent*/
-    }
-
-    /* styling paragraphs */
-    p {
-        color: rgb(255, 255, 255);
-    }
-
-    /* styling individual list items */
-    li {
-        /* added a different list style */
-        list-style-type: square;
-        color: rgb(255, 255, 255);
-    }
-
-    /* styling the table  */
+    /* sourse to make table more mobile friendly: https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width */
     table {
-        width: 100%;
-        /* padding: 2em; */
-        color: rgb(255, 255, 255);
-        /* text-align: start; */
+        font-size: 0.8em;
+        padding: 0;
+        table-layout: fixed;
+        overflow-x: auto;
+        display: block;
     }
 
-    /* added text color to table heads */
-    th {
-        text-align: center;
-        color: rgba(68, 255, 0, 0.803);
-    }
-
-    /* styling the table data */
+    /* added border to tables */
+    th,
     td {
-        text-align: center;
+        border: 1px solid black;
+        margin: 0;
     }
 
-    /* styling the form */
-    form {
-        border: 1px solid white;
-        padding: 0.5em;
-        margin: 1.5em;
-        color: whitesmoke;
-    }
-
-    /* styling fieldset */
-    fieldset {
-        margin: 1em;
-        padding: 1em;
-    }
-
-    /* styling individual inout */
-    input {
-        /* added margin to separate */
-        margin: 0.5em;
-    }
-
-    /* selection all inout inside fieldset */
+    /* resized input boxes */
     #email,
     #name,
     #organization,
     #role {
         height: 40px;
+        width: 120%;
+        background-color: rgba(255, 255, 255, 0.773);
+    }
+
+    /* styling fieldset */
+    fieldset {
+        font-size: 20px;
+        border: 1px solid red;
         width: 100%;
+    }
+
+    fieldset label {
+        font-size: 0.8em;
+    }
+
+    button {
+        height: 40px;
+        width: 100%;
+        margin: 5px;
+        transition: 0.3s ease-out;
+    }
+
+    /* source used to make transition effect on the button: https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+    button:hover {
+        font-size: 20px;
+    }
+}
+
+/* Responsiveness for tablets */
+@media (max-width: 700px) {
+    body {
+        padding: 5px;
+    }
+
+    /* removed margin to fit content to screen */
+    section,
+    aside {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* change font size of header */
+    h1 {
+        width: auto;
+        font-size: 1.6em;
+        margin-top: 0px;
+    }
+
+    /* aligned header text to center  */
+    h2 {
+        text-align: center;
+    }
+
+    /* aligned and resized the paragraph */
+    header p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 70px;
+        margin-bottom: 10px;
+    }
+
+    /* selecting contact detail in header using class */
+    .header-contact {
+        color: whitesmoke;
+        font-size: 0.7em;
+    }
+
+    /* rexized and re-positioned profile picture to center */
+    #profile-image {
+        width: 200px;
+        height: 200px;
+        border: 5px rgba(24, 20, 1, 0.476) solid;
+        position: relative;
+        top: 20px;
+    }
+
+    /* sourse to make table more mobile friendly: https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width */
+    table {
+        padding: 0;
+        table-layout: fixed;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* added border to tables */
+    th,
+    td {
+        border: 1px solid black;
+        margin: 0;
+    }
+
+    /* resized input boxes */
+    #email,
+    #name,
+    #organization,
+    #role {
+        height: 40px;
+        width: 90%;
         background-color: rgba(79, 21, 117, 0.500);
         color: whitesmoke;
     }
 
-    form label {
+    /* styling fieldset */
+    fieldset {
+        font-size: 20px;
+        border: 1px solid red;
         width: 100%;
     }
 
-    textarea {
+    button {
+        height: 40px;
         width: 100%;
-        background-color: rgba(79, 21, 117, 0.5);
+        margin: 5px;
+        transition: 0.3s ease-out;
+    }
+
+    /* source used to make transition effect on the button: https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+    button:hover {
+        font-size: 20px;
+    }
+}
+
+/* Responsivenses for larger tablets */
+@media (max-width: 1000px) {
+    body {
+        padding: 5px;
+    }
+
+    /* removed margin to fit content to screen */
+    section,
+    aside {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* change font size of header */
+    h1 {
+        width: auto;
+        font-size: 1.6em;
+        margin-top: 0px;
+    }
+
+    /* aligned header text to center  */
+    h2 {
+        text-align: center;
+    }
+
+    /* aligned and resized the paragraph */
+    header p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 70px;
+        margin-bottom: 10px;
+    }
+
+    /* selecting contact detail in header using class */
+    .header-contact {
+        color: whitesmoke;
+        font-size: 0.7em;
+    }
+
+    /* rexized and re-positioned profile picture to center */
+    #profile-image {
+        width: 200px;
+        height: 200px;
+        border: 5px rgba(24, 20, 1, 0.476) solid;
+        position: relative;
+        top: 20px;
+    }
+
+    /* sourse to make table more mobile friendly: https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width */
+    table {
+        padding: 0;
+        table-layout: fixed;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* added border to tables */
+    th,
+    td {
+        border: 1px solid black;
+        margin: 0;
+    }
+
+    /* resized input boxes */
+    #email,
+    #name,
+    #organization,
+    #role {
+        height: 40px;
+        width: 90%;
+        background-color: rgba(79, 21, 117, 0.500);
         color: whitesmoke;
     }
 
-    /* styling button */
+    /* styling fieldset */
+    fieldset {
+        font-size: 20px;
+        border: 1px solid red;
+        width: 100%;
+    }
+
     button {
-        background-color: rgba(115, 9, 147, 0.73);
-        color: antiquewhite;
+        height: 40px;
+        width: 100%;
+        margin: 5px;
+        transition: 0.3s ease-out;
     }
 
-    /* styling on button hover */
+    /* source used to make transition effect on the button: https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
     button:hover {
-        /* increse size when hovering */
-        font-size: 1rem;
-        /* change color when hovering */
-        background-color: rgba(195, 89, 195, 0.688);
-    }
-
-    /* styling the footer */
-    footer {
-        /* decreased font size  */
-        font-size: 10px;
+        font-size: 20px;
     }
 }
